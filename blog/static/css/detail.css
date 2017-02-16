@@ -1,0 +1,86 @@
+div {
+    margin: auto auto;
+}
+
+.wrapper {
+	min-height: auto;
+	max-width: auto;
+    min-width: 500px;
+	background: #f9fbfd;
+	margin: 10px 50px;
+    border: 1px;
+    text-decoration: none;
+}
+
+
+.header {
+	  overflow: hidden;
+	  min-height: 8.5%;	
+}
+
+
+#logo {
+	float: left;
+}
+
+
+.header #menu li {
+	float: right;
+	list-style-type: none;
+	margin: 20px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.main {
+    text-align: center;
+}
+
+
+.main #main-left{
+	background: blueviolet;
+	float: left;
+	min-width: 20%;
+	min-height: 850px;
+	#min-height: 70%;
+    #margin-right: 5px;
+}
+
+
+.main #main-left-archive {
+	background: cornsilk;
+	max-width: 300px;
+	margin: 10px 10px;
+	min-height: auto;
+}
+
+
+.main #main-left-hot {
+	background: cadetblue;
+	max-width: 300px;
+	margin: 10px 10px;
+}
+
+
+.main #main-right {
+    float: left;
+	background: maroon;
+	min-width: 80%;
+	min-height: 850px;
+    padding: 10px 20px;
+    #margin: 50px;
+	#min-height: 70%;
+}
+
+
+.footer {
+    clear: both;
+    text-align: center;
+	background: lightskyblue;
+    min-height: 30px;
+    width: auto;
+    margin: 100px auto;
+    top: 948px;
+}

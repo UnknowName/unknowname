@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css %}
+<link href="{% static 'css/detail.css' %}" rel="stylesheet" type ="text/css"/>
+{% endblock %}
+
+
+{% block title %}
+    unknowname_{{ article.classify.name }}
+{% endblock %}
+
+
+{% block right %}
+    <div id='art_title'>
+        <p>{{ article.title }}</p>
+    </div>
+    <div id='art_date'>
+        <p>{{ article.create_date }}</p>
+    </div>
+    {% autoescape off %}
+        <div id='art_content'>
+            <p>{{ article.content }}</p>
+        </div>
+    {% endautoescape %}
+{% endblock %}

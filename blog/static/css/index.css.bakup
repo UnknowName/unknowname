@@ -1,0 +1,5 @@
+.wrapper {
+    margin:auto auto;
+    background:green;
+    max-width:1400px;
+}

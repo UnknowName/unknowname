@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}unknowname_archives_{{ year }}{% endblock %}
+
+
+{% block css %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet" type ="text/css"/>
+{% endblock %}
+
+
+{% block hot_article %}
+hot articles
+{% endblock %}
+
+
+{% block archive_year %}
+archive_year
+{% endblock %}
+
+
+{% block right %}
+{% for article in articles %}
+    <p><a href="{{ article.get_absolute_url }}">{{ article.title }}</a><p>
+{% endfor %}
+{% endblock %}

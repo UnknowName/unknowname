@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}unknowname_index{% endblock %}
+
+
+{% block css %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet" type ="text/css"/>
+{% endblock %}
+
+
+{% block archive_year %}
+<p>文章归档</p>
+    {% for year in years %}
+        <p><a href="{% url 'archive' year  %}">{{ year }}</a></p>
+    {% endfor %}
+{% endblock %}
+
+
+{% block hot_article %}
+<p>热门博文</p>
+{% for hot in hots %}
+    <p>{{ hot.title }}</p>
+{% endfor %}
+{% endblock %}
+
+
+{% block right %}
+    {% for article in articles %}
+        <p><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></p>
+    {% endfor %}
+{% endblock %}

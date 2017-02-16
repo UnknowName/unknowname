@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css %}
+<link href="{% static 'css/about.css' %}" rel="stylesheet" type ="text/css"/>
+{% endblock %}
+
+
+{% block title %}unknowname_about_me{% endblock %}
+
+
+{% block right %}
+<div id='title'>
+    <h1>有关部门</h1>
+</div> 
+<div id='content'>
+    <p>UnknowName</p>
+    <p><img src="{% static 'img/email.png' %}"></img>:&nbsp;&nbsp;burtte@sina.com</p>
+    <p><img src="{% static 'img/github.ico' %}"></img><a target="_blank" href="https://github.com/UnknowName">:&nbsp;&nbsp;https://github.com/UnknowName</a></p>
+    <p>在网络的世界里不要轻易暴露自己的真实身份</p>
+    <p>本为机械男一枚，因痴迷于黑客之道,入坑而不能自拨</p>
+</div>
+{% endblock %}

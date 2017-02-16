@@ -1,0 +1,100 @@
+.wrapper {
+	min-height: auto;
+	#max-width: 1400px;
+	max-width: auto;
+    min-width: 500px;
+	background: #f9fbfd;
+    #background: #ebf5f9;
+	margin: 10px 50px;
+    border: 1px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.header {
+	  overflow: hidden;
+	  min-height: 8.5%;	
+}
+
+
+.header #logo {
+	float: left;
+}
+
+
+.header #menu li {
+	float: right;
+	list-style-type: none;
+	margin: 20px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.main {
+	min-height: auto;
+    text-align: center;
+}
+
+
+.main #main-left{
+	#background: blueviolet;
+	float: left;
+	min-width: 20%;
+	#min-height: 850px;
+    min-height: auto;
+	#min-height: 70%;
+}
+
+
+.main #main-left-archive {
+	background: cornsilk;
+	max-width: 300px;
+	margin: 10px 10px;
+	min-height: auto;
+}
+
+
+.main #main-left-hot {
+	background: cadetblue;
+	max-width: 300px;
+	margin: 10px 10px;
+}
+
+
+.main #title {
+    font-size: 20px;
+    font-weight: 900;
+    #position: absolute;
+    margin-top: 18%;
+
+}
+
+.main #content {
+    padding: 50px 10px;
+}
+
+.main #main-right {
+	float: left;
+	min-width: 80%;
+	min-height: 850px;
+    padding: 700px auto;
+}
+
+
+.footer {
+    float: center;
+    font-size: 20px;
+    text-align: center;
+	#background: lightskyblue;
+    min-height: 30px;
+    width: auto;
+    margin: 0 auto;
+    #position: absolute;
+    top: 948px;
+}

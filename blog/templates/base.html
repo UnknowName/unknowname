@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        {% block css %}{% endblock %}
+		<!--<script src="js/1.js"></script>-->
+	</head>
+	<body>
+	<div class='wrapper'><!--wrapper div开始-->
+		<div class="header"><!--header div开始处-->
+			<div class="header" id="logo"><!--header#log-->
+				<a target="_blank" href="{%  url 'about' %}"><img src='{% static "img/logo.png" %}'></a>
+			</div><!--header#log结束-->
+			
+			<div class="header" id="menu"><!--header#menu开始-->
+                <ul>
+                {% for menu in menus %}
+                    <li><a href="{% url 'classify' menu %}">{{ menu}}</a></li>
+                {% endfor %}
+                </ul>
+			</div><!--header#menu div结束处-->
+			
+		</div><!--header div 结束-->
+		
+		<div class="main"><!--main div开始-->
+			<div id="main-left"><!--main-left div开始处-->
+				<div id='main-left-hot'><!--显示归档连接-->
+                    {% block hot_article %}{% endblock %}
+				</div>
+				<div id="main-left-archive">
+                    {% block archive_year %}{% endblock %}
+				</div>
+			</div><!--main-left div结束处-->
+			
+			
+			<div id="main-right"><!--main-right div开始处-->
+                {% block right %}
+                {% endblock %}
+                <div id="pagintor">
+                    {% for page in articles.paginator.page_range %}
+                        {% ifequal page articles.number %}
+                            {{ page }}
+                        {% else %}
+                            <a href="?page={{ page}}">{{ page }}</a>
+                        {% endifequal %}
+                    {% endfor %}
+                </div>
+			</div><!--main-right div结束处-->
+        </div><!--main div结束-->
+		<div class="footer"><!--footer div开始-->
+            &copy;2016-2017 UnknowName
+		</div><!--footer div结束-->
+	</div><!--wrapper div结束-->
+</html>
