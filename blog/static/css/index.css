@@ -76,6 +76,7 @@ div {
 	min-width: 80%;
 	min-height: 850px;
     padding: 10px 20px;
+    position: relative;
     #margin: 50px;
 	#min-height: 70%;
 }
@@ -84,9 +85,9 @@ div {
 #pagintor {
     background: green;
     position: absolute;
-    bottom: 5px;
+    bottom: 50px;
     width: auto;
-    left: 60%;
+    left: 50%;
     #right: auto;
 }
 
