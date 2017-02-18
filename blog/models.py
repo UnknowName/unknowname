@@ -33,7 +33,7 @@ class Classifys(models.Model):
 class Articles(models.Model):
     title = models.CharField(max_length=50, verbose_name=u'文章标题')
     content = UEditorField(
-        max_length=1500, width=900, height=600, verbose_name=u'文章内容'
+        max_length=100000, width=900, height=600, verbose_name=u'文章内容'
     )
     reads = models.IntegerField(default=0, verbose_name=u'阅读量')
     author = models.ForeignKey(Authors, verbose_name=u'创作者')

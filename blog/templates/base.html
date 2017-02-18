@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
         {% block css %}{% endblock %}
 		<!--<script src="js/1.js"></script>-->
 	</head>
@@ -39,6 +40,7 @@
 			<div id="main-right"><!--main-right div开始处-->
                 {% block right %}
                 {% endblock %}
+                <!--
                 <div id="pagintor">
                     {% for page in articles.paginator.page_range %}
                         {% ifequal page articles.number %}
@@ -47,11 +49,23 @@
                             <a href="?page={{ page}}">{{ page }}</a>
                         {% endifequal %}
                     {% endfor %}
-                </div>
+                </div>-->
 			</div><!--main-right div结束处-->
+            <div id="pagintor">
+                {% for page in articles.paginator.page_range %}
+                    {% ifequal page articles.number %}
+                        {{ page }}
+                    {% else %}
+                        <a href="?page={{ page}}">{{ page }}</a>
+                    {% endifequal %}
+                {% endfor %}
+            </div>
         </div><!--main div结束-->
+        <hr>
 		<div class="footer"><!--footer div开始-->
             &copy;2016-2017 UnknowName
 		</div><!--footer div结束-->
 	</div><!--wrapper div结束-->
+    {% block js %}{% endblock %}
+    </body>
 </html>

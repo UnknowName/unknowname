@@ -8,7 +8,7 @@ from django.core.paginator import EmptyPage
 
 
 def split_page(request,lst):
-    paginator = Paginator(lst,10)
+    paginator = Paginator(lst,8)
     page = request.GET.get('page')
     try:
         articles = paginator.page(page)

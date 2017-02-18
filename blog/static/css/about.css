@@ -71,12 +71,12 @@ a {
     font-size: 20px;
     font-weight: 900;
     #position: absolute;
-    margin-top: 18%;
+    margin-top: 15%;
 
 }
 
 .main #content {
-    padding: 50px 10px;
+    #padding: 50px 10px;
 }
 
 .main #main-right {
