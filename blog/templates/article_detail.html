@@ -1,5 +1,8 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
+
+
+{% block title %}unknowname_index{% endblock %}
 
 
 {% block css %}
@@ -7,23 +10,37 @@
 {% endblock %}
 
 
-{% block title %}
-    unknowname_{{ article.classify.name }}
+{% block archive_year %}
+<h4 class="hot_title">历史归档</h4>
+    {% for year in years %}
+        <p class="left_title"><a href="{% url 'archive' year  %}">{{ year }}</a></p>
+    {% endfor %}
+{% endblock %}
+
+
+{% block hot_article %}
+<h4 class="hot_title">热门博文</h4>
+{% for hot in hots %}
+    <p class="left_title"><a href="{{  hot.get_absolute_url }}">{{ hot.title }}</a></p>
+{% endfor %}
 {% endblock %}
 
 
 {% block right %}
-    <h1 class='art_title'>
+<h1 class='art_title'>
     {{ article.title }}
-    </h1>
-    <!--<div class='art_date'>-->
-        <span class="art_date">
-            {{ article.create_date|date:"Y-m-d" }},&nbsp;阅读数:{{ article.reads }}
-        </span>
-    <!--</div>-->
-        <div class='art_content'>
-            {% autoescape off %}
-            <p>{{ article.content|escape|linebreaksbr }}</p>
-            {% endautoescape %}
-         </div>
+</h1>
+<span class="art_date">
+    {{ article.create_date|date:"Y-m-d" }}&nbsp;,&nbsp; 阅读数:{{ article.reads }}
+</span>
+<div class="art_content">
+    {% autoescape off %}
+    <p>{{ article.content|escape|linebreaksbr }}</p>
+    {% endautoescape %}
+</div>
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/index.js' %}"></script>
 {% endblock %}

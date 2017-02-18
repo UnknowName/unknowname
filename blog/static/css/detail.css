@@ -48,13 +48,16 @@ div {
 
 
 .main #main-left-archive {
-	background: cornsilk;
-	#max-width: 300px;
-	margin: 10px 10px;
-	min-height: auto;
+	margin: 6px 5px;
+    border: solid 1px #dedfe2;
 }
 
 
+.main #main-left-hot {
+    max-width: 300px;
+    margin: 2px 5px;
+    border: solid 1px #dedfe2;
+}
 
 
 .main #main-right {
