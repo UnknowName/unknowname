@@ -57,10 +57,7 @@ div {
 
 .main #main-left-archive {
 	#background: cornsilk;
-	#max-width: 300px;
-	#min-width: 300px;
-	margin: 8px 10px;
-	min-height: auto;
+	margin: 6px 5px;
     border: solid 1px #dedfe2;
 }
 
