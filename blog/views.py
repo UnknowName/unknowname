@@ -34,6 +34,7 @@ def classify(request, classify=None):
         return HttpResponse('暂无该分类文章')
     if not articles:
         return HttpResponse('该栏目下暂无相关文章')
+    classify_name = classify
     return render(request, 'list.html', locals())
 
 
