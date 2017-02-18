@@ -24,5 +24,5 @@ def add_menu(request):
 
 
 def hot_articles(request):
-    hots = Articles.objects.order_by('reads')[:5]
+    hots = Articles.objects.order_by('-reads')[:5]
     return {'hots':hots}

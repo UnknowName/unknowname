@@ -13,15 +13,17 @@
 
 
 {% block right %}
-    <div id='art_title'>
-        <p>{{ article.title }}</p>
-    </div>
-    <div id='art_date'>
-        <p>{{ article.create_date }}</p>
-    </div>
-    {% autoescape off %}
-        <div id='art_content'>
-            <p>{{ article.content }}</p>
-        </div>
-    {% endautoescape %}
+    <h1 class='art_title'>
+    {{ article.title }}
+    </h1>
+    <!--<div class='art_date'>-->
+        <span class="art_date">
+            {{ article.create_date|date:"Y-m-d" }},&nbsp;阅读数:{{ article.reads }}
+        </span>
+    <!--</div>-->
+        <div class='art_content'>
+            {% autoescape off %}
+            <p>{{ article.content|escape|linebreaksbr }}</p>
+            {% endautoescape %}
+         </div>
 {% endblock %}

@@ -40,6 +40,8 @@ def classify(request, classify=None):
 def article(request, classify, id):
     try:
         article = Articles.objects.get(pk=id)
+        article.reads += 1
+        article.save()
     except Exception:
         return HttpResponse('Sorry,您查看的文章未找到')
     return render(request, 'article_detail.html', locals())
