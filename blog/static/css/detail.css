@@ -64,7 +64,7 @@ div {
     float: left;
 	max-width: 80%;
 	min-width: 80%;
-	min-height: 850px;
+	#min-height: 850px;
     border: solid 1px #dedfe2;
     position: relative;
 }

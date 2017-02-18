@@ -86,16 +86,10 @@ div {
 
 #main-right {
     float: left;
-	#background: maroon;
-	#min-width: 80%;
     max-width: 80%;
-	min-height: 850px;
     padding: 5px 15px;
-    #border: solid 1px #f6f7f8;
     border: solid 1px #dedfe2;
     position: relative;
-    #margin: 0px 0px;
-	#min-height: 70%;
 }
 
 #main-right h3 {
