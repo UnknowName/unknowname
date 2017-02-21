@@ -8,16 +8,16 @@ div {
 	max-width: auto;
     min-width: 500px;
 	background: #f9fbfd;
-	margin: 10px 50px;
+	margin: 20px 10px;
     #border: solid 1px #ced2d6;
     text-decoration: none;
 }
 
 
-/*a {
+a {
     text-decoration: none;
 }
-*/
+
 
 .header {
 	  overflow: hidden;
@@ -29,6 +29,9 @@ div {
 	float: left;
 }
 
+li {
+    list-style-type: none;
+}
 
 .header #menu li {
 	float: right;
@@ -42,31 +45,24 @@ div {
 
 .main {
     text-align: center;
+    min-width: 400px;
 }
 
 
 .main #main-left{
-	#background: blueviolet;
 	float: left;
-	min-width: 20%;
-	#min-height: 850px;
-	#min-height: 70%;
-    #margin-right: 5px;
+	min-width: 18%;
 }
 
 
 .main #main-left-archive {
-	#background: cornsilk;
 	margin: 6px 5px;
     border: solid 1px #dedfe2;
 }
 
 
 .main #main-left-hot {
-	#background: cadetblue;
-	max-width: 300px;
 	margin: 2px 5px;
-    #border: solid 1px #f6f7f9;
     border: solid 1px #dedfe2;
 }
 
@@ -92,9 +88,11 @@ div {
     position: relative;
 }
 
+
 #main-right h3 {
     text-align: left;
 }
+
 
 #main-right .art_content {
     text-align:left;
@@ -108,7 +106,6 @@ div {
 
 #pagintor {
     clear:both;
-    #background: green;
     left: 50%;
 }
 
@@ -116,7 +113,6 @@ div {
 .footer {
     clear: both;
     text-align: center;
-	#background: lightskyblue;
     min-height: 30px;
     width: auto;
     padding: 5px;
