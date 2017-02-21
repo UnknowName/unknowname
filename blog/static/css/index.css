@@ -83,6 +83,7 @@ li {
 #main-right {
     float: left;
     max-width: 80%;
+    min-width: 100px;
     padding: 5px 15px;
     border: solid 1px #dedfe2;
     position: relative;

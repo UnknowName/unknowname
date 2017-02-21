@@ -54,7 +54,7 @@ div {
 
 
 .main #main-left-hot {
-    max-width: 300px;
+    #max-width: 300px;
     margin: 2px 5px;
     border: solid 1px #dedfe2;
 }
