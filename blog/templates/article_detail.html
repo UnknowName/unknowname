@@ -27,12 +27,12 @@
 
 
 {% block right %}
-<h1 class='art_title'>
-    {{ article.title }}
-</h1>
+<div class="art_title">
+    <h1>{{ article.title }}</h1>
 <span class="art_date">
-    {{ article.create_date|date:"Y-m-d" }}&nbsp;,&nbsp; 阅读数:{{ article.reads }}
+    &nbsp;&nbsp;&nbsp;&nbsp;{{ article.create_date|date:"Y-m-d" }}&nbsp;,&nbsp; 阅读数:{{ article.reads }}
 </span>
+</div>
 <div class="art_content">
     {% autoescape off %}
     <p>{{ article.content|escape|linebreaksbr }}</p>

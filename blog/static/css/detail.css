@@ -40,7 +40,6 @@ div {
 
 
 .main #main-left{
-	#background: blueviolet;
 	float: left;
 	min-width: 20%;
 	min-height: 850px;
@@ -54,7 +53,6 @@ div {
 
 
 .main #main-left-hot {
-    #max-width: 300px;
     margin: 2px 5px;
     border: solid 1px #dedfe2;
 }
@@ -63,8 +61,7 @@ div {
 .main #main-right {
     float: left;
 	max-width: 80%;
-	min-width: 80%;
-	#min-height: 850px;
+	min-width: 100px;
     border: solid 1px #dedfe2;
     position: relative;
 }
@@ -72,7 +69,6 @@ div {
 #main-right .art_content {
     text-align: left;
     padding:1px 10px;
-    #border: solid 1px #dedfe2;
 }
 
 
@@ -82,10 +78,6 @@ div {
 
 .art_date {
     color: #babcbd;
-    #background: green;
-    position: absolute;
-    top: 75px;
-    left: 470px;
 }
 
 .clear {
@@ -96,7 +88,6 @@ div {
 .footer {
     clear: both;
     text-align: center;
-	#background: lightskyblue;
     min-height: 30px;
     width: auto;
     margin-top: 100px auto;
