@@ -45,13 +45,13 @@ li {
 
 .main {
     text-align: center;
-    min-width: 400px;
+    min-width: 990px;
 }
 
 
 .main #main-left{
 	float: left;
-	min-width: 18%;
+	#min-width: 18%;
 }
 
 
@@ -83,7 +83,7 @@ li {
 #main-right {
     float: left;
     max-width: 80%;
-    min-width: 100px;
+    #min-width: 100px;
     padding: 5px 15px;
     border: solid 1px #dedfe2;
     position: relative;
