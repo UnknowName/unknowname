@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf8'>
+        <title>自助修改项目映射</title>
+        <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        -->
+    </head>
+    <body>
+    <div style="margin:10px 40px;width:900px">
+        <h2>当前映射的信息如下</h2>
+            {% for server in servers %}
+            <p>{{ server.app }}映射的内网IP为{{ server.ips }},端口为{{ server.ports }}</p>
+            {% endfor %}
+            <p>如果映射地址为二个，表示后面服务器有二台。端口是第一个对应第一个端口</p>
+            <p style="color:red">如映射IP为192.168.0.73，192.168.0.106，端口为8082，8080</p>
+            <p style="color:red">则表示后端服务器为192.168.0.73:8082与192.168.0.106:8080两台</p>
+        <h2>内部测试环境应用(Tomcat)可供映射详情</h2>
+        <table style="border:2px solid;text-align:center">
+            <tr>
+                <th width="30%">名称</th>
+                <th width='25%'>第一套IP</th>
+                <th width='10%'>第一套端口</th>
+                <th width='25%'>第二套IP</th>
+                <th width='10%'>第二套端口</th>
+           </tr>
+            <tr>
+                <td>xueshandai-web</td>
+                <td>192.168.0.68</td>
+                <td>8081</td>
+                <td>192.168.0.106</td>
+                <td>8081</td>
+            </tr>
+            <tr>
+                <td>xueshandai-mobile</td>
+                <td>192.168.0.73</td>
+                <td>8082</td>
+                <td>192.168.0.106</td>
+                <td>8080</td>
+            </tr>
+            <tr>
+                <td>xueshandai-app</td>
+                <td>192.168.0.58</td>
+                <td>61008</td>
+                <td>192.168.0.18</td>
+                <td>8080</td>
+            </tr>
+            <tr>
+                <td>xueshandai-mobile-ssl</td>
+                <td>无，这是用于给蔡华卫测试的</td>
+            </tr>
+        </table>
+        <h3 style="color:red">如果需要修改。按要求输入以下信息，所输入的信息为修改后映射的服务器IP与端口:</h3>
+        <form action="{% url 'update' %}" method='post' onsubmit='return check()'>
+            {% csrf_token %}
+            {{ form_html }}
+            <input type='submit' value='提交'>
+            <p>备注:</p>
+            <p>如果应用类型为xueshandai-app则修改app的映射</p>
+            <p>如果应用类型为xueshandai-web则修改web的映射</p>
+            <p>如果应用类型为xueshandai-mobile则修改mobile的映射</p>
+            <p>如果应用类型为xueshandai-mobile-ssl则修改mobile_ssl的映射</p>
+            <p>如果映射地址为127.0.0.1,则表示未做映射（映射无效）</p>
+            <h1 style="color:red">所有映射到外网的应用，只允许公司外网访问!</h1>
+        </form>
+    </div>
+    <script>
+    function check() {
+         var oIp = document.getElementById('id_ips');
+         var oPort = document.getElementById('id_ports');
+         var reg_ip = '^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|' +
+                 '[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]' +
+                 '{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}' +
+                 '[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|' +
+                 '[1-9]{1}[0-9]{1}|[0-9])$';
+         var reg_port = '^[1-9]$|(^[1-9][0-9]$)|(^[1-9][0-9][0-9]$)|' + '(^[1-9][0-9][0-9][0-9]$)|(^[1-6][0-5][0-5][0-3][0-5]$)';
+         var re = new RegExp(reg_ip);
+         var re_p = new RegExp(reg_port);
+         var ips = oIp.value.split(',');
+         var ports = oPort.value.split(',');
+         if(ips.length == 1 && ports.length == 1) {
+             if(oIp.value && oPort.value) {
+                 if(re.test(oIp.value) && re_p.test(oPort.value)) {
+                    return true;
+                 }else {
+                    alert('不合法的IP地地址或者端口号！');
+                    return false
+                 };        
+             }else {
+               alert('IP或者端口输入为空，请输入正常的IP与端口号！');
+               return false;
+             };
+         }else if(ips.length == 2 && ports.length == 2) {
+             return true;        
+         } else {    
+             alert('你的输入不合法，请确认！');
+             return false;
+         };
+    };
+    </script>
+    </body>
+</html>
