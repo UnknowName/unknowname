@@ -26,21 +26,21 @@
                 <th width='10%'>第二套端口</th>
            </tr>
             <tr>
-                <td>xueshandai-web</td>
+                <td>web</td>
                 <td>192.168.0.68</td>
                 <td>8081</td>
                 <td>192.168.0.106</td>
                 <td>8081</td>
             </tr>
             <tr>
-                <td>xueshandai-mobile</td>
+                <td>mobile</td>
                 <td>192.168.0.73</td>
                 <td>8082</td>
                 <td>192.168.0.106</td>
                 <td>8080</td>
             </tr>
             <tr>
-                <td>xueshandai-app</td>
+                <td>app</td>
                 <td>192.168.0.58</td>
                 <td>61008</td>
                 <td>192.168.0.18</td>
@@ -48,7 +48,7 @@
             </tr>
             <tr>
                 <td>xueshandai-mobile-ssl</td>
-                <td>无，这是用于给蔡华卫测试的</td>
+                <td>无，这是用于给开发测试的</td>
             </tr>
         </table>
         <h3 style="color:red">如果需要修改。按要求输入以下信息，所输入的信息为修改后映射的服务器IP与端口:</h3>
@@ -57,10 +57,10 @@
             {{ form_html }}
             <input type='submit' value='提交'>
             <p>备注:</p>
-            <p>如果应用类型为xueshandai-app则修改app的映射</p>
-            <p>如果应用类型为xueshandai-web则修改web的映射</p>
-            <p>如果应用类型为xueshandai-mobile则修改mobile的映射</p>
-            <p>如果应用类型为xueshandai-mobile-ssl则修改mobile_ssl的映射</p>
+            <p>如果应用类型为app则修改app的映射</p>
+            <p>如果应用类型为-web则修改web的映射</p>
+            <p>如果应用类型为mobile则修改mobile的映射</p>
+            <p>如果应用类型为mobile-ssl则修改mobile_ssl的映射</p>
             <p>如果映射地址为127.0.0.1,则表示未做映射（映射无效）</p>
             <h1 style="color:red">所有映射到外网的应用，只允许公司外网访问!</h1>
         </form>
