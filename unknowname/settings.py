@@ -27,6 +27,7 @@ SECRET_KEY = 'a=rl%wo(*d%rn6@=kq%(^kdo*j69kpru&7w51mog_ly_g8#0im'
 if socket.gethostname() == 'ubuntu12':
     DEBUG = True
 else:
+    #DEBUG = False
     DEBUG = True
 
 ALLOWED_HOSTS = ['*']

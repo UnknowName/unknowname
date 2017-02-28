@@ -7,7 +7,7 @@
         <meta name="keywords" content="有关部门官方博客">
         <meta name="description" content="有关部门的一亩三分地。一点Linux,Python,运维技术的笔记">
         <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-        <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+        <script src="{% static 'blog/js/jquery-3.1.1.min.js' %}"></script>
         {% block css %}{% endblock %}
 		<!--<script src="js/1.js"></script>-->
 	</head>
@@ -15,7 +15,7 @@
 	<div class='wrapper'><!--wrapper div开始-->
 		<div class="header"><!--header div开始处-->
 			<div class="header" id="logo"><!--header#log-->
-				<a href="{%  url 'index' %}"><img src='{% static "img/logo.png" %}'></a>
+				<a href="{%  url 'index' %}"><img src='{% static "blog/img/logo.png" %}'></a>
 			</div><!--header#log结束-->
 			
 			<div class="header" id="menu"><!--header#menu开始-->
