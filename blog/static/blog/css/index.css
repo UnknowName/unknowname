@@ -58,12 +58,14 @@ li {
 .main #main-left-archive {
 	margin: 6px 5px;
     border: solid 1px #dedfe2;
+    min-width: 280px;
 }
 
 
 .main #main-left-hot {
 	margin: 2px 5px;
     border: solid 1px #dedfe2;
+    min-width: 280px;
 }
 
 
