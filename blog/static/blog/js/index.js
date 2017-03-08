@@ -10,6 +10,6 @@ oA.mouseleave(function() {
 //修改首页菜单与内容边框不对齐
 var oMenu = $('#menu ul');
 var oMain = $('#main-right');
-if(oUl.width() > oMain.width()) {
-    oUl.css('padding','0px 205px');
+if(oMenu.width() > oMain.width()) {
+    oMenu.css('padding','0px 205px');
 };
